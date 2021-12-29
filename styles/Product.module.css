@@ -1,0 +1,23 @@
+.container {
+    height: calc(100vh - 100px);
+    background-color: #222;
+    display: flex;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    flex: 1;
+    padding: 20px;
+}
+
+.imgContainer {
+    width: 80%;
+    height: 80%;
+    position: relative;
+}
