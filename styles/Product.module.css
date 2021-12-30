@@ -1,6 +1,6 @@
 .container {
     height: calc(100vh - 100px);
-    background-color: #222;
+    background-color: #ffffff;
     display: flex;
 }
 
@@ -20,4 +20,82 @@
     width: 80%;
     height: 80%;
     position: relative;
+}
+
+.price {
+    color: #067B04;
+    font-size: 1.5em;
+    font-weight: 400;
+    border-bottom: 1px solid #067B04;
+}
+
+.sizes {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.size {
+    width: 140px;
+    height: 80px;
+    position: relative;
+    cursor: pointer;
+}
+
+.size:nth-child(2) {
+    width: 160px;
+    height: 100px;
+}
+
+.size:last-child {
+    width: 180px;
+    height: 120px;
+}
+
+.number {
+    position: absolute;
+    top: -5px;
+    right: -20px;
+    background-color: #067B04;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 0px 15px;
+    border-radius: 50%;
+}
+
+.ingredients {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #067B04;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.quantity {
+    width: 50px;
+    height: 40px;
+}
+
+.button {
+    height: 30px;
+    margin-left: 10px;
+    background-color: #067B04;
+    color: white;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
 }
