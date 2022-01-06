@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Marleen's Animal Farm</title>
+        <title>Animal Farm</title>
         <meta name="description" content="Best Animal Farm in London" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

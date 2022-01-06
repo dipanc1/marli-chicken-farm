@@ -99,3 +99,36 @@
     font-weight: 500;
     cursor: pointer;
 }
+
+@media screen and (max-width: 480px) {
+    .container {
+        height: auto;
+        text-align: center;
+        flex-direction: column;
+    }
+    .imgContainer {
+        width: 70vw;
+        height: 70vw;
+    }
+    .sizes {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .ingredients {
+        flex-direction: column;
+    }
+    .option {
+        margin: 10px;
+        font-size: 24px;
+    }
+    .checkbox {
+        width: 30px;
+        height: 30px;
+    }
+    .quantity,
+    .button {
+        height: 50px;
+        margin-left: 20px;
+    }
+}

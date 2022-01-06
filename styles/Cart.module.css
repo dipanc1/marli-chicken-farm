@@ -1,5 +1,6 @@
 .container {
     padding: 50px;
+    display: flex;
 }
 
 .left {
@@ -24,7 +25,7 @@
 .name {
     font-size: 20px;
     font-weight: bold;
-    color: #067B04;
+    color: #067b04;
 }
 
 .total {
@@ -48,7 +49,7 @@
 }
 
 .button {
-    background-color: #067B04;
+    background-color: #067b04;
     color: white;
     border: none;
     padding: 10px;
@@ -57,4 +58,51 @@
     font-weight: bold;
     cursor: pointer;
     margin-top: 20px;
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .table {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .trTable {
+        display: none;
+    }
+    .tr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .name,
+    .total {
+        font-size: 24px;
+    }
+    .extras,
+    .price,
+    .quantity {
+        font-size: 20px;
+    }
+    .price::before {
+        content: "Price: ";
+        font-weight: 500;
+    }
+    .quantity::before {
+        content: "Quantity: ";
+        font-weight: 500;
+    }
+    .total::before {
+        content: "Total: ";
+        font-weight: 500;
+    }
+    .wrapper {
+        width: 100%;
+    }
 }

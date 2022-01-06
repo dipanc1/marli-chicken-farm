@@ -7,7 +7,7 @@ function cart() {
         <div className={styles.container}>
             <div className={styles.left}>
                 <table className={styles.table}>
-                    <tr align="left" className={styles.tr}>
+                    <tr align="left" className={styles.trTable}>
                         <th>Product</th>
                         <th>Name</th>
                         <th>Type</th>
@@ -15,7 +15,7 @@ function cart() {
                         <th>Quantity</th>
                         <th>Total</th>
                     </tr>
-                    <tr>
+                    <tr className={styles.tr}>
                         <td>
                             <div className={styles.imgContainer}>
                                 <Image

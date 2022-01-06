@@ -33,7 +33,7 @@
 }
 
 .texts {
-    color: #067B04;
+    color: #067b04;
 }
 
 .text:first-child {
@@ -52,7 +52,7 @@
     align-items: center;
     list-style: none;
     padding-left: 160px;
-    color: #067B04;
+    color: #067b04;
 }
 
 .listItem {
@@ -68,7 +68,7 @@
     position: absolute;
     top: -10px;
     right: -10px;
-    background: #CA2339;
+    background: #ca2339;
     color: #ffffff;
     border-radius: 50%;
     width: 20px;
@@ -77,4 +77,16 @@
     align-items: center;
     justify-content: center;
     font-weight: bold;
+}
+
+@media screen and (max-width: 480px) {
+    .item {
+        flex: 3;
+    }
+    .item:nth-child(2) {
+        display: none;
+    }
+    .item:last-child {
+        flex: 1;
+    }
 }
