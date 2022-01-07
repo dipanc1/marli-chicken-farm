@@ -1,8 +1,12 @@
 import styles from '../styles/Cart.module.css';
 import Image from 'next/image';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 
 function cart() {
+    const dispatch = useDispatch();
+    const cart = useSelector((state) => state.cart)
     return (
         <div className={styles.container}>
             <div className={styles.left}>
@@ -15,31 +19,35 @@ function cart() {
                         <th>Quantity</th>
                         <th>Total</th>
                     </tr>
-                    <tr className={styles.tr}>
-                        <td>
-                            <div className={styles.imgContainer}>
-                                <Image
-                                    src="/img/pizza.png" layout="fill" alt=""
-                                    objectFit='cover'
-                                />
-                            </div>
-                        </td>
-                        <td className={styles.name}>Chicken</td>
-                        <td>
-                            <span className={styles.extras}>
-                                Laying
-                            </span>
-                        </td>
-                        <td>
-                            <span className={styles.price}>$19.90</span>
-                        </td>
-                        <td>
-                            <span className={styles.quantity}>2</span>
-                        </td>
-                        <td>
-                            <span className={styles.total}>$39.80</span>
-                        </td>
-                    </tr>
+                    {cart.products.map((product) => (
+                        <tr className={styles.tr} key={product._id}>
+                            <td>
+                                <div className={styles.imgContainer}>
+                                    <Image
+                                        src={product.img} layout="fill" alt=""
+                                        objectFit='cover'
+                                    />
+                                </div>
+                            </td>
+                            <td className={styles.name}>{product.title}</td>
+                            <td>
+                                <span className={styles.extras}>
+                                    {product.extras.map(extra => (
+                                        <span key={extra._id}>{extra.text}</span>
+                                    ))}
+                                </span>
+                            </td>
+                            <td>
+                                <span className={styles.price}>${product.price}</span>
+                            </td>
+                            <td>
+                                <span className={styles.quantity}>{product.quantity}</span>
+                            </td>
+                            <td>
+                                <span className={styles.total}>${product.price * product.quantity}</span>
+                            </td>
+                        </tr>
+                    ))}
                 </table>
             </div>
             <div className={styles.right}>
