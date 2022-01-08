@@ -50,7 +50,7 @@ function Product({ productData }) {
             </div>
             <div className={styles.right}>
                 <h1 className={styles.title}>{productData.title}</h1>
-                <span className={styles.price}>${price}</span>
+                <span className={styles.price}>€{price}</span>
                 <p className={styles.desc}>{productData.desc}</p>
                 <h3 className={styles.choose}>Choose the size</h3>
                 <div className={styles.sizes}>
