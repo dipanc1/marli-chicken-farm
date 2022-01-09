@@ -53,8 +53,8 @@ function cart() {
                 disabled={false}
                 forceReRender={[amount, currency, style]}
                 fundingSource={undefined}
-                createOrder={(data, actions) => {
-                    return actions.order
+                createOrder={async (data, actions) => {
+                    const orderId = await actions.order
                         .create({
                             purchase_units: [
                                 {
@@ -64,22 +64,19 @@ function cart() {
                                     },
                                 },
                             ],
-                        })
-                        .then((orderId) => {
-                            // Your code here after create the order
-                            return orderId;
                         });
+                    return orderId;
                 }}
                 onApprove={function (data, actions) {
                     return actions.order.capture().then(function (details) {
                         const shipping = details.purchase_units[0].shipping;
-
                         createOrder({
                             customer: shipping.name.full_name,
                             address: shipping.address.address_line_1,
                             total: cart.total,
-                            method: 1
-                        })
+                            method: 1,
+                        });
+                        // console.log(details);
                     });
                 }}
             />
@@ -159,7 +156,7 @@ function cart() {
                             >
                                 <ButtonWrapper
                                     currency={currency}
-                                    showSpinner={true}
+                                    showSpinner={false}
                                 />
                             </PayPalScriptProvider>
                         </div>
