@@ -14,7 +14,7 @@ function Index({ orders, products }) {
             setProductList(productList.filter(product => product._id !== id))
         } catch (error) {
             console.log(error)
-        }
+        } 
     }
 
     const handleStatus = async (id) => {
