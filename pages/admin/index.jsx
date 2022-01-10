@@ -13,7 +13,7 @@ function Index({ orders, products }) {
             const res = await axios.delete("http://localhost:3000/api/products/" + id);
             setProductList(productList.filter(product => product._id !== id))
         } catch (error) {
-            console.log(error)
+            console.log(error);
         }
     }
 
