@@ -9,7 +9,7 @@ const OrderSchema = new mongoose.Schema({
     address: {
         type: String,
         required: true,
-        maxlength: 60,
+        maxlength: 200,
     },
     total: {
         type: Number,
@@ -21,8 +21,8 @@ const OrderSchema = new mongoose.Schema({
     },
     method: {
         type: Number,
-        required: true,
+        required: true
     },
 }, { timestamps: true });
 
-export default mongoose.models.Product || mongoose.model("Product", OrderSchema);
+export default mongoose.models.Order || mongoose.model("Order", OrderSchema);
