@@ -25,7 +25,7 @@ const Login = () => {
     return (
         <div className={styles.container}>
             <div className={styles.wrapper}>
-                <h1>Marleen's Dashboard</h1>
+                <h1>Dashboard</h1>
                 <input
                     placeholder="Username"
                     className={styles.input}

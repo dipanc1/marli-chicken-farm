@@ -14,7 +14,7 @@ function Index({ orders, products }) {
             setProductList(productList.filter(product => product._id !== id))
         } catch (error) {
             console.log(error)
-        } 
+        }
     }
 
     const handleStatus = async (id) => {
@@ -111,12 +111,12 @@ function Index({ orders, products }) {
 }
 
 export const getServerSideProps = async (ctx) => {
-    const myCookie = ctx.req?.cookie || '';
+    const myCookie = ctx.req?.cookies || '';
 
     if (myCookie.token !== process.env.TOKEN) {
         return {
-            redirect:{
-                destination : "/admin/login",
+            redirect: {
+                destination: "/admin/login",
                 permanent: false,
             }
         }
