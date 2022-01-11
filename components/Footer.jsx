@@ -3,7 +3,7 @@ import styles from "../styles/Footer.module.css";
 
 const Footer = () => {
     return (
-        <div className={styles.container}>
+        <div className={styles.container} id="Contact">
             <div className={styles.item}>
                 <Image src="/img/bg.jpeg" width={520} height={325} objectFit="cover" alt="" />
             </div>

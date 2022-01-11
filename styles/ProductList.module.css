@@ -11,6 +11,12 @@
     width: 70%;
 }
 
+.desc2 {
+    font-size: 30px;
+    color: #067b04;
+    width: 40%;
+}
+
 .wrapper {
     width: 100%;
     display: flex;

@@ -3,14 +3,6 @@ import styles from "../styles/Add.module.css";
 
 
 const Add = ({ setClose }) => {
-
-    const [file, setFile] = useState(null);
-    const [title, setTitle] = useState(null);
-    const [desc, setDesc] = useState(null);
-    const [prices, setPrices] = useState([]);
-    const [extraOptions, setExtraOptions] = useState([]);
-    const [extra, setExtra] = useState(null);
-
     const [file, setFile] = useState(null);
     const [title, setTitle] = useState(null);
     const [desc, setDesc] = useState(null);
@@ -72,7 +64,7 @@ const Add = ({ setClose }) => {
                     <input type="file" onChange={(e) => setFile(e.target.files[0])} />
                 </div>
                 <div className={styles.item}>
-                    <label className={styles.label}>Title</label>
+                    <label className={styles.label}>Name</label>
                     <input
                         className={styles.input}
                         type="text"
@@ -80,7 +72,7 @@ const Add = ({ setClose }) => {
                     />
                 </div>
                 <div className={styles.item}>
-                    <label className={styles.label}>Desc</label>
+                    <label className={styles.label}>About Animal</label>
                     <textarea
                         rows={4}
                         type="text"
@@ -88,7 +80,7 @@ const Add = ({ setClose }) => {
                     />
                 </div>
                 <div className={styles.item}>
-                    <label className={styles.label}>Prices</label>
+                    <label className={styles.label}>Prices (with respect to sizes)</label>
                     <div className={styles.priceContainer}>
                         <input
                             className={`${styles.input} ${styles.inputSm}`}
@@ -111,12 +103,12 @@ const Add = ({ setClose }) => {
                     </div>
                 </div>
                 <div className={styles.item}>
-                    <label className={styles.label}>Extra</label>
+                    <label className={styles.label}>Type</label>
                     <div className={styles.extra}>
                         <input
                             className={`${styles.input} ${styles.inputSm}`}
                             type="text"
-                            placeholder="Item"
+                            placeholder="Chicken i.e. Laying or Breeding"
                             name="text"
                             onChange={handleExtraInput}
                         />

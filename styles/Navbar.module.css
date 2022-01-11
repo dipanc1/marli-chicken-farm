@@ -17,7 +17,7 @@
 }
 
 .item:nth-child(2) {
-    flex: 4;
+    flex: 3;
 }
 
 .item:last-child {
@@ -34,6 +34,7 @@
 
 .texts {
     color: #067b04;
+    cursor: pointer;
 }
 
 .text:first-child {

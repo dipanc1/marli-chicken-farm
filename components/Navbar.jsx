@@ -14,22 +14,30 @@ const Navbar = () => {
                 <div className={styles.callButton}>
                     <Image src="/img/telephone.png" alt="" width="32" height="32" />
                 </div>
+                <Link href={"tel:+919592738038"}>
                 <div className={styles.texts}>
                     <div className={styles.text}>ORDER NOW!</div>
                     <div className={styles.text}>+91 95927 38038</div>
                 </div>
+                </Link>
             </div>
             <div className={styles.item}>
                 <ul className={styles.list}>
                     <Link href="/">
                         <li className={styles.listItem}>Homepage</li>
                     </Link>
-                    <li className={styles.listItem}>Products</li>
-                    <li className={styles.listItem}>Menu</li>
-                    <Image src="/img/logo.png" alt="" width="150" height="150" />
-                    <li className={styles.listItem}>Events</li>
-                    <li className={styles.listItem}>Blog</li>
-                    <li className={styles.listItem}>Contact</li>
+                    <Link href="#Products">
+                        <li className={styles.listItem}>Products</li>
+                    </Link>
+                    <Link href="/">
+                        <Image src="/img/logo.png" alt="" width="150" height="150" className={styles.listItem}/>
+                    </Link>
+                    <Link href="/admin">
+                        <li className={styles.listItem}>Admin Page</li>
+                    </Link>
+                    <Link href="#Contact">
+                        <li className={styles.listItem}>Contact</li>
+                    </Link>
                 </ul>
             </div>
             <Link href="/cart">
