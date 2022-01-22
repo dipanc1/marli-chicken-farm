@@ -1,5 +1,5 @@
 module.exports = {
-    image: {
+    images: {
         domains: ["res.cloudinary.com"]
     }
 }
